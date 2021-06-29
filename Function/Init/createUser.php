@@ -4,7 +4,7 @@
     Username VARCHAR(255) NOT NULL,
     Password VARCHAR(255) NOT NULL,
     IdentificationID INT NOT NULL AUTO_INCREMENT,
-    User_Level BIT,
+    User_Level VARCHAR(255) NOT NULL,
     First_Name VARCHAR(255) NOT NULL,
     Last_Name VARCHAR(255) NOT NULL,
     Phone_No VARCHAR(255) NOT NULL,
