@@ -28,13 +28,13 @@ $_SESSION["LEVEL"] =$user_level;
 echo "<h2>You are now logged in as ".$_SESSION["USER"]." with access level ".$_SESSION["LEVEL"]."</h2>";
 switch ($count['User_Level']) {
 case "Admin":
-	header("Location: ../Function/Admin/mainAdmin.php");
+	header("Location: ../../User/Admin/mainAdmin.html");
 	break;
 case "Manager":
-	header("Location: ../Function/Admin/mainManager.php");
+	header("Location: ./../User/Manager/mainManager.html");
 	break;
 case "Student":
-	header("Location: ../Function/Admin/mainStudent.php");
+	header("Location: ../../User/Student/mainStudent.html");
 	break;
 default:
     echo "No User Level!";
@@ -43,7 +43,7 @@ default:
 else {
 
 $_SESSION["Login"] = "NO";
-header("Location: index.php");
+header("Location: ../../Login/index.html");
 }
 
 mysqli_close($conn);
