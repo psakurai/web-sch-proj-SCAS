@@ -1,0 +1,47 @@
+CREATE TABLE User (
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    IdentificationID INT NOT NULL AUTO_INCREMENT,
+    User_Level BIT,
+    First_Name VARCHAR(255) NOT NULL,
+    Last_Name VARCHAR(255) NOT NULL,
+    Phone_No VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Address VARCHAR(255) NOT NULL,
+    PRIMARY KEY (IdentificationID)
+);
+CREATE TABLE Academic_Information (
+    InfoID INT AUTO_INCREMENT NOT NULL,
+    IdentificationID INT NOT NULL,
+    Study_Level VARCHAR(255) NOT NULL,
+    Year INT NOT NULL,
+    Semester INT NOT NULL,
+    PRIMARY KEY (InfoID),
+    FOREIGN KEY (IdentificationID) REFERENCES User(IdentificationID)
+);
+CREATE TABLE College (
+    College_Name VARCHAR(255) NOT NULL,
+    Building_No VARCHAR(255) NOT NULL,
+    Room_No INT NOT NULL,
+    Capacity INT NOT NULL,
+    Available INT NOT NULL,
+    PRIMARY KEY (Building_No, Room_No)
+);
+CREATE TABLE Result (
+    ResultID INT NOT NULL AUTO_INCREMENT,
+    IdentificationID INT NOT NULL,
+    Building_No VARCHAR(255) NOT NULL,
+    Room_No INT NOT NULL,
+    Status BOOLEAN,
+    ManagerID INT NOT NULL,
+    PRIMARY KEY (ResultID),
+    FOREIGN KEY (Building_No) REFERENCES College(Building_No),
+    FOREIGN KEY (Room_No) REFERENCES College(Room_No),
+    FOREIGN KEY (ManagerID) REFERENCES Approval(ManagerID)
+);
+CREATE TABLE Approval (
+    ManagerID INT NOT NULL AUTO_INCREMENT,
+    IdentificationID NOT NULL,
+    PRIMARY KEY (ManagerID),
+    FOREIGN KEY (IdentificationID) REFERENCES User(IdentificationID)
+);
