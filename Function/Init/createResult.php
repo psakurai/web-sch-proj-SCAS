@@ -2,7 +2,7 @@
   require ("config.php");
   $sql = "CREATE TABLE Result (
       ResultID INT NOT NULL AUTO_INCREMENT,
-      IdentificationID INT NOT NULL,
+      IdentificationID VARCHAR(255) NOT NULL,
       Building_No VARCHAR(255) NOT NULL,
       Room_No INT NOT NULL,
       Status BOOLEAN,
