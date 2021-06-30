@@ -91,7 +91,7 @@ header {
     height: 500px;
     top: 58;
     left: 0;
-    background-image: url("background.jpg");
+    background-image: url("../jpg/background.jpg");
     z-index: -1;
 }
 
@@ -134,19 +134,19 @@ header {
 }
 
 #s2-opt1 {
-    background-image: url("life_1.jpg");
+    background-image: url("../jpg/life_1.jpg");
     background-size: 600px 300px;
     background-repeat: no-repeat;
 }
 
 #s2-opt2 {
-    background-image: url("life_3.jpg");
+    background-image: url("../jpg/life_3.jpg");
     background-size: 600px 300px;
     background-repeat: no-repeat;
 }
 
 #s2-opt3 {
-    background-image: url("room_1.jpg");
+    background-image: url("../jpg/room_1.jpg");
     background-size: 600px 300px;
     background-repeat: no-repeat;
 }
