@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div>
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div id="add-user">
+        <h2>Add User</h2>
+        <form method="post" id="add-user" action="../../Function/Admin/addUser.php">
+            <div class="input-data">
+                <label for="username">Username</label>
+                <input type="text" name="username" required />
+                <label for="password">Password</label>
+                <input type="password" name="password" value="" />
+                <label for="id">Identification ID</label>
+                <input type="number" name="id" required />
+                <label for="user-level">User Level</label>
+                <input type="text" name="user-level" required />
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" required />
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" required />
+                <label for="phone">Phone No</label>
+                <input type="text" name="phone" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" required />
+                <label for="address">Address</label>
+                <input type="text" name="address" required />
+            </div>
+            <input type="submit" name="submit" value="Add User" />
+        </form>
+    </div>
+    <div id="edit-user">
+        <h2>Edit User</h2>
+        <form method="post" id="edit-user" action="../../Function/Admin/editUser.php">
+            <div class="input-data">
+                <label for="username">Username</label>
+                <input type="text" name="username" />
+                <label for="password">Password</label>
+                <input type="password" name="password" />
+                <label for="id">Identification ID</label>
+                <input type="number" name="id" required />
+                <label for="user-level">User Level</label>
+                <input type="text" name="user-level" />
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" />
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" />
+                <label for="phone">Phone No</label>
+                <input type="text" name="phone" />
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+                <label for="address">Address</label>
+                <input type="text" name="address" />
+            </div>
+            <input type="submit" name="submit" value="Edit User" />
+        </form>
+    </div>
+    <div id="delete-user">
+        <h2>Delete User</h2>
+        <form method="post" id="delete-user" action="../../Function/Admin/deleteUser.php">
+            <div class="input-data">
+                <label for="id">Identification ID</label>
+                <input type="number" name="id" required />
+            </div>
+            <input type="submit" name="submit" value="Delete User" />
+        </form>
+    </div>
+</body>
+</html>
