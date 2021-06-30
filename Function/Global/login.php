@@ -10,7 +10,7 @@ $sql="SELECT * FROM user WHERE username='$myusername' and password='$mypassword'
 
 $result = mysqli_query($conn, $sql);
 
-$rows=mysqli_fetch_assoc($result);
+$rows=mysql_query($result);
 
 $user_name=$rows["Username"];
 $user_password=$rows["Password"];
