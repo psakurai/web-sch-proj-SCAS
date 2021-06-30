@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <title>Need to change name</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+    function validateForm() {
+      let x = document.forms["input-form"]["Username"].value;
+      let y = document.forms["input-form"]["Password"].value;
+      if (x == "" || y =="") {
+        alert("Login failed. Incorrect username or password.");
+        return false;
+      }
+    }
+</script>
   </head>
   <body>
   <div class="grid-container">
@@ -11,7 +21,7 @@
     </div>
     <div class="right-section">
       <div class="login-container">
-        <form class="input-form" action="../Function/Global/login.php" method="post">
+        <form class="input-form" action="../Function/Global/login.php" onsubmit="return validateLogin()"method="post">
           <img src="UTM-logo.png" alt="UTM-emblem" style="width:200px;
           height:65px"><br>
           <div class="input-data">

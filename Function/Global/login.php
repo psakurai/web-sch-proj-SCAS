@@ -39,10 +39,11 @@ case "Student":
 default:
     echo "No User Level!";
 }
-} 
+}
 else {
 
 $_SESSION["Login"] = "NO";
+echo "Login failed. Incorrect username or password.";
 header("Location: ../../Login/index.html");
 }
 
