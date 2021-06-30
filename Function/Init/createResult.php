@@ -8,8 +8,7 @@
       Status BOOLEAN,
       ManagerID INT NOT NULL,
       PRIMARY KEY (ResultID),
-      FOREIGN KEY (Building_No) REFERENCES College(Building_No),
-      FOREIGN KEY (Room_No) REFERENCES College(Room_No),
+      FOREIGN KEY (Building_No,Room_No) REFERENCES College(Building_No,Room_No),
       FOREIGN KEY (ManagerID) REFERENCES Approval(ManagerID)
   )";
 
