@@ -1,8 +1,11 @@
+.body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 70% 30%;
   margin: -19px -19px -19px -19px;
-  height: 1000px;
 }
 .left-section {
   background-color: green;
@@ -12,27 +15,31 @@
   background-position: center;
 }
 .right-section {
+  background-image: url(https://www.theactivetimes.com/sites/default/files/%5Bcurrent-date%3Acustom%3AY/m/d%5D/Most_beautiful_colleges_reboot_getty_hero.jpg);
   background-color: grey;
   grid-column-start: 2;
   grid-column-end: 3;
 }
 .login-container {
   background-color: white;
-  margin: 20% 10%;
-  padding: 50% 0%;
+  margin: 20% 0%;
+  padding: 20% 0%;
   border-radius: 13px;
   text-align: center;
 }
 .input-form img{
 }
 .input-form .input-data input{
-  width: 240px;
+  width: 230px;
   margin: 8px 0px;
 }
 .login-container #login-btn {
   background-color: #142d4c;
   color: white;
-  margin: 20px 0px;
-  padding: 7px 50px;
+  margin: 20px -10px;
+  padding: 7px 0px;
   font-size: 12px;
+}
+footer {
+  background-color: green;
 }
