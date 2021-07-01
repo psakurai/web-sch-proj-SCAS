@@ -1,73 +1,132 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../Assets/css/style.css" type="text/css" />
 </head>
 <body>
-    <div>
-        <h1>Admin Dashboard</h1>
-    </div>
-    <div id="add-user">
-        <h2>Add User</h2>
-        <form method="post" id="add-user" action="../../Function/Admin/addUser.php">
-            <div class="input-data">
-                <label for="username">Username</label>
-                <input type="text" name="username" required />
-                <label for="password">Password</label>
-                <input type="password" name="password" value="" />
-                <label for="id">Identification ID</label>
-                <input type="number" name="id" required />
-                <label for="user-level">User Level</label>
-                <input type="text" name="user-level" required />
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" required />
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" required />
-                <label for="phone">Phone No</label>
-                <input type="text" name="phone" required />
-                <label for="email">Email</label>
-                <input type="email" name="email" required />
-                <label for="address">Address</label>
-                <input type="text" name="address" required />
+    <header>
+        <div class="header-container">
+            <div class="header-container-left">
+                <div id="nav_home"> HOME </div>
             </div>
-            <input type="submit" name="submit" value="Add User" />
-        </form>
-    </div>
-    <div id="edit-user">
-        <h2>Edit User</h2>
-        <form method="post" id="edit-user" action="../../Function/Admin/editUser.php">
-            <div class="input-data">
-                <label for="username">Username</label>
-                <input type="text" name="username" />
-                <label for="password">Password</label>
-                <input type="password" name="password" />
-                <label for="id">Identification ID</label>
-                <input type="number" name="id" required />
-                <label for="user-level">User Level</label>
-                <input type="text" name="user-level" />
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" />
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" />
-                <label for="phone">Phone No</label>
-                <input type="text" name="phone" />
-                <label for="email">Email</label>
-                <input type="email" name="email" />
-                <label for="address">Address</label>
-                <input type="text" name="address" />
+            <div class="header-container-right">
+                <div id="nav_apply"> APPROVAL </div>
+                <div id="nav_view"> VIEW RECORD </div>
+                <div id="wrap-icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
             </div>
-            <input type="submit" name="submit" value="Edit User" />
-        </form>
-    </div>
-    <div id="delete-user">
-        <h2>Delete User</h2>
-        <form method="post" id="delete-user" action="../../Function/Admin/deleteUser.php">
-            <div class="input-data">
-                <label for="id">Identification ID</label>
-                <input type="number" name="id" required />
+        </div>
+        <div class="wrap-icon-menu">
+            <ul id="menu-opt">
+                <li>
+                    <a>MY PROFILE</a>
+                </li>
+                <li>
+                    <a> SETTING </a>
+                </li>
+                <li>
+                    <a> SIGN OUT </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="body-container">
+            <div id="background">
+                <div id="background-center">
+                    <h1>Welcome to University!</h1>
+                </div>
             </div>
-            <input type="submit" name="submit" value="Delete User" />
-        </form>
-    </div>
+            <div id="section-2">
+                <h3>Admin Dashboard</h3>
+                <div id="s2-left">
+                    <form name="add-user" method="POST" action="../../Function/Admin/addUser.php">
+                        <table id="myTable">
+                            <tr>
+                                <th>Add User</th>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="s2-center">
+                    <form method="POST" action="../../Function/Admin/editUser.php">
+                        <table id="myTable">
+                            <tr>
+                                <th>Edit User</th>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div id="add-user">
+            <h2>Add User</h2>
+            <form method="post" id="add-user" action="../../Function/Admin/addUser.php">
+                <div class="input-data">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" value="" />
+                    <label for="id">Identification ID</label>
+                    <input type="number" name="id" required />
+                    <label for="user-level">User Level</label>
+                    <input type="text" name="user-level" required />
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" required />
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" required />
+                    <label for="phone">Phone No</label>
+                    <input type="text" name="phone" required />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required />
+                    <label for="address">Address</label>
+                    <input type="text" name="address" required />
+                </div>
+                <input type="submit" name="submit" value="Add User" />
+            </form>
+        </div>
+        <div id="edit-user">
+            <h2>Edit User</h2>
+            <form method="post" id="edit-user" action="../../Function/Admin/editUser.php">
+                <div class="input-data">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" />
+                    <label for="id">Identification ID</label>
+                    <input type="number" name="id" required />
+                    <label for="user-level">User Level</label>
+                    <input type="text" name="user-level" />
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" />
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" />
+                    <label for="phone">Phone No</label>
+                    <input type="text" name="phone" />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" />
+                    <label for="address">Address</label>
+                    <input type="text" name="address" />
+                </div>
+                <input type="submit" name="submit" value="Edit User" />
+            </form>
+        </div>
+        <div id="delete-user">
+            <h2>Delete User</h2>
+            <form method="post" id="delete-user" action="../../Function/Admin/deleteUser.php">
+                <div class="input-data">
+                    <label for="id">Identification ID</label>
+                    <input type="number" name="id" required />
+                </div>
+                <input type="submit" name="submit" value="Delete User" />
+            </form>
+        </div>
+    </section>
 </body>
 </html>
