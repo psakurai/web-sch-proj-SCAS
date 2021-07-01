@@ -8,8 +8,7 @@
       Status BOOLEAN,
       ManagerID INT NOT NULL,
       PRIMARY KEY (ResultID),
-      FOREIGN KEY (Building_No,Room_No) REFERENCES College(Building_No,Room_No),
-      FOREIGN KEY (ManagerID) REFERENCES Approval(ManagerID)
+      FOREIGN KEY (Building_No,Room_No) REFERENCES College(Building_No,Room_No)
   )";
 
   if (mysqli_query($conn, $sql)) {
