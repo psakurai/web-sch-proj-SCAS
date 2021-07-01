@@ -37,14 +37,16 @@ function makeRequest(url, userName) {
 }
 
 function alertContents() {
-  if (xhttp.readyState === XMLHttpRequest.DONE) {
-    if (xhttp.status === 200) {
-      let response = JSON.parse(xhttp.responseText);
-      alert(response.computedString);
-    } else {
-      alert('There was a problem with the request.');
+    if (xhttp.readyState === XMLHttpRequest.DONE) {
+        if (xhttp.status === 200) {
+            console.log(xhttp.responseText);
+            let response = JSON.parse(xhttp.responseText);
+            document.getElementById("view-month").value = response.resultCnt;
+            alert(response.resultCnt);
+        } else {
+            alert('There was a problem with the request.');
+        }
     }
-  }
 }
 
 function updateViewWeek() {
