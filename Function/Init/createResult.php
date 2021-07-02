@@ -5,7 +5,7 @@
       IdentificationID VARCHAR(255) NOT NULL,
       Building_No VARCHAR(255) NOT NULL,
       Room_No INT NOT NULL,
-      Status TINYINT,
+      Status TINYINT NOT NULL,
       ManagerID INT NOT NULL,
       PRIMARY KEY (ResultID),
       FOREIGN KEY (Building_No,Room_No) REFERENCES College(Building_No,Room_No)

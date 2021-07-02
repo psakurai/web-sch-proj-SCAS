@@ -60,28 +60,62 @@ header {
     visibility: hidden;
     background: #dfe1e8;
 }
-
-
-
 .header-container > ul {
     list-style: none;
 }
-
-#wrap-icon > i {
-    top: 21px;
-    height: 2px;
-    width: 18px;
-    background: grey;
-    position: absolute;
+.subnav {
+ float: left;
+ overflow: hidden;
+ display: block;
+ margin: 4px;
+ height: 20px;
+ width:60px;
+ background: black;
+ border-radius: 9px;
+}
+.subnav .subnavbtn {
+ font-size: 16px;
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ background-color: inherit;
+ font-family: inherit;
+ margin: 0;
+}
+.navbar a {
+ background-color: blue;
+}
+.navbar a:hover, .subnav:hover{
+ background-color: grey;
+}
+.subnav-content {
+ display: none;
+ position: absolute;
+ right: 10;
+ height: 115px;
+ margin-top: -10px;
+ padding: 0px 0px 0px 30px;
+ background-color: grey;
 
 }
-
-#wrap-icon > i:nth-child(2) {
-    top: 28px;
+.subnav-content a {
+ float: left;
+ color: black;
+ text-decoration: none;
+ padding: 10px 20px;
+ font-size: 15px;
 }
-
-#wrap-icon > i:nth-child(3) {
-    top: 35px;
+.subnav-content a:hover {
+ background-color: #eee;
+ color: black;
+ margin-left: -50px;
+ width: 110%;
+ text-align: right;
+ font-size: 16px;
+}
+.subnav:hover .subnav-content {
+ display: block;
 }
 
 /* body section */
@@ -112,7 +146,7 @@ header {
     z-index: 1;
     background: #4A919E;
     width: 100%;
-    
+
 }
 
 #section-2 {
