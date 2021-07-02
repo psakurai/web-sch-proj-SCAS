@@ -1,45 +1,41 @@
-let xhttp;
-let reqcnt = '../../Function/Manager/getRequestCount.php';
-let accreqcnt = '../../Function/Manager/getAccetedRequestCount.php';
+let reqcnturl = '../../Function/Manager/getRequestCount.php';
+let accreqcnturl = '../../Function/Manager/getAcceptedRequestCount.php';
 
-window.onload = setInterval(function () {
-    makeRequest(reqcnt, updateRequestCount);
-    makeRequest(accreqcnt, updateAcceptedRequestCount);
+window.onload = setInterval(() => {
+    const reqcnt = makeRequest(reqcnturl, updateRequestCount);
+    const accreqcnt = makeRequest(accreqcnturl, updateAcceptedRequestCount);
 }, 1000);
 
-function makeRequest(url, update) {
+const makeRequest = (url, update) => {
+    let xhttp;
     xhttp = new XMLHttpRequest();
 
     if (!xhttp) {
         alert('Giving up :( Cannot create an XMLHTTP instance ');
         return false;
     }
-    xhttp.onreadystatechange = update;
-    xhttp.open('GET', url);
+    // xhttp.onreadystatechange = update;
+    xhttp.onreadystatechange = () => {
+        if (xhttp.readyState === XMLHttpRequest.DONE) {
+            if (xhttp.status === 200) {
+                console.log(xhttp.responseText);
+                update(xhttp.responseText);
+            }
+        }
+    };
+    xhttp.open('POST', url);
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhttp.send();
 }
 
-function updateRequestCount() {
-    if (xhttp.readyState === XMLHttpRequest.DONE) {
-        if (xhttp.status === 200) {
-            console.log(xhttp.responseText);
-            let response = JSON.parse(xhttp.responseText);
-            document.getElementById("request").value = response.resultCnt;
-        } else {
-
-        }
-    }
+const updateRequestCount = (responseText) => {
+    console.log(responseText);
+    const response = JSON.parse(responseText);
+    document.getElementById("request").value = response.resultCnt;
 }
 
-function updateAcceptedRequestCount() {
-    if (xhttp.readyState === XMLHttpRequest.DONE) {
-        if (xhttp.status === 200) {
-            console.log(xhttp.responseText);
-            let response = JSON.parse(xhttp.responseText);
-            document.getElementById("accepted-request").value = response.accResultCnt;
-        } else {
-
-        }
-    }
+const updateAcceptedRequestCount = (responseText) => {
+    console.log(responseText);
+    const response = JSON.parse(responseText);
+    document.getElementById("accepted-request").value = response.accResultCnt;
 }
