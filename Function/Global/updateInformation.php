@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('config.php');
+require('../Init/config.php');
 require_once 'editProfileFunction.php';
 
 if(isset($_POST['update'])) { // This if statement if user click update button on Personal Info Page

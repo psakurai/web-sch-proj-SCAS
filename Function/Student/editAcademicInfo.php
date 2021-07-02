@@ -1,20 +1,50 @@
 <?php
 session_start();
-require('../Global/config.php');
+require('../Init/config.php');
+echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' />"; // Use external css file
 ?>
 
-<ul>
-  <li><a href = ../Global/editProfile.php>Personal Information</a></li>
-  <?php
-    if($_SESSION["LEVEL"] === "Student")
-    {
-      echo "<li><a href = editAcademicInfo.php>Academic Info</a></li>";
-    }
-  ?>
-  <li><a href = ../Global/editPassword.php>Change Password</a></li>
-</ul>
+<header>
+    <div class="header-container">
+        <div class="header-container-left">
+            <div id="nav_home"> HOME </div>
+        </div>
+        <div class="header-container-right">
+            <div id="nav_apply"> APPLY ROOM </div>
+            <div id="nav_view"> VIEW ROOM </div>
+            <div id="wrap-icon">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-icon-menu">
+        <ul id="menu-opt">
+            <li>
+                <a>MY PROFILE</a>
+            </li>
+            <li>
+                <a> SETTING </a>
+            </li>
+            <li>
+                <a> SIGN OUT </a>
+            </li>
+        </ul>
+    </div>
+</header>
 
-<hr>
+<div class = "nav-bar-container">
+<nav class = "navigation-bar-edit-profile">
+  <ul>
+    <li><a href = ../Global/viewProfile.php>Back</a></li>
+    <li><a href = ../Global/editProfile.php >Personal Information</a></li>
+    <li><a href = ../Student/editAcademicInfo.php class="active">Academic Information</a></li>
+    <li><a href = ../Global/editPassword.php>Change Password</a></li>
+  </ul>
+</nav>
+</div>
+
 <form action ="../Global/updateInformation.php" method="post">
 <?php
   $currentUser = $_SESSION["ID"];
@@ -27,19 +57,23 @@ require('../Global/config.php');
       while($row = mysqli_fetch_array($result))
         {
           ?>
+          <div class = "form-box-container">
           <div class = "form-box">
-            Study Level <input type="text" name="newStudyLevel" class="form-box" value ="<?php echo $row['Study_Level']; ?>">
+            <label>Study Level</label> <input type="text" name="newStudyLevel" class="form-box" value ="<?php echo $row['Study_Level']; ?>">
           </div>
           <div class = "form-box">
-            Year <input type="text" name="newYear" class="form-box" value ="<?php echo $row['Year']; ?>">
+            <label>Year </label><input type="text" name="newYear" class="form-box" value ="<?php echo $row['Year']; ?>">
           </div>
           <div class = "form-box">
-            Semester <input type="text" name="newSemester" class="form-box" value ="<?php echo $row['Semester']; ?>">
+            <label>Semester </label><input type="text" name="newSemester" class="form-box" value ="<?php echo $row['Semester']; ?>">
           </div>
 
+          <br>
           <div class = "form-box">
             <input type ="submit" name="update_Academic" class ="submit-button" value="Update">
           </div>
+          <br>
+
             <?php
         }
 ?>
@@ -57,3 +91,20 @@ if(isset($_GET["error"])){
   }
 }
 ?>
+</div>
+
+
+<footer>
+    <h4>CONNECT</h4> <br>
+    <div class="footer-container">
+        <div id="footer-left">
+            <p>Contact us for more information</p>
+            <p>unsource@email.com</p>
+            <p>+60 12-345 6789</p>
+        </div>
+
+        <div id="footer-right">
+            <ul>Connect us on your social media</ul>
+        </div>
+    </div>
+</footer>

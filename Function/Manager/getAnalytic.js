@@ -1,9 +1,11 @@
-let reqcnturl = '../../Function/Manager/getRequestCount.php';
+let reqcnturl = "../../Function/Manager/getRequestCount.php";
 let accreqcnturl = '../../Function/Manager/getAcceptedRequestCount.php';
+let rejreqcnturl = "../../Function/Manager/getRejectedRequestCount.php";
 
 window.onload = setInterval(() => {
     const reqcnt = makeRequest(reqcnturl, updateRequestCount);
     const accreqcnt = makeRequest(accreqcnturl, updateAcceptedRequestCount);
+    const rejreqcnt = makeRequest(rejreqcnturl, updateRejectedRequestCount);
 }, 1000);
 
 const makeRequest = (url, update) => {
@@ -38,4 +40,10 @@ const updateAcceptedRequestCount = (responseText) => {
     console.log(responseText);
     const response = JSON.parse(responseText);
     document.getElementById("accepted-request").value = response.accResultCnt;
+}
+
+const updateRejectedRequestCount = (responseText) => {
+    console.log(responseText);
+    const response = JSON.parse(responseText);
+    document.getElementById("rejected-request").value = response.rejResultCnt;
 }

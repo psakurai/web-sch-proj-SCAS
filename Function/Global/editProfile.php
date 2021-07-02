@@ -1,22 +1,57 @@
-<!--Student Edit Profile-->
+<!--User Edit Profile-->
 
 <?php
 session_start();
-require('config.php');
+require('../Init/config.php');
+echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' />"; // Use external css file
 ?>
 
+<header>
+    <div class="header-container">
+        <div class="header-container-left">
+            <div id="nav_home"> HOME </div>
+        </div>
+        <div class="header-container-right">
+            <div id="nav_apply"> APPLY ROOM </div>
+            <div id="nav_view"> VIEW ROOM </div>
+            <div id="wrap-icon">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="wrap-icon-menu">
+        <ul id="menu-opt">
+            <li>
+                <a>MY PROFILE</a>
+            </li>
+            <li>
+                <a> SETTING </a>
+            </li>
+            <li>
+                <a> SIGN OUT </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class = "nav-bar-container">
+<nav class = "navigation-bar-edit-profile">
   <ul>
-    <li><a href = editProfile.php>Personal Information</a></li>
+    <li><a href = viewProfile.php>Back</a></li>
+    <li><a href = editProfile.php class="active">Personal Information</a></li>
     <?php
       if($_SESSION["LEVEL"] === "Student")
       {
-        echo "<li><a href = ../Student/editAcademicInfo.php>Academic Info</a></li>";
+        echo "<li><a href = ../Student/editAcademicInfo.php>Academic Information</a></li>";
       }
     ?>
     <li><a href = editPassword.php>Change Password</a></li>
   </ul>
+</nav>
+</div>
 
-<hr>
 <form action ="updateInformation.php" method="post">
 <?php
   $currentUser = $_SESSION["USER"];
@@ -29,26 +64,29 @@ require('config.php');
       while($row = mysqli_fetch_array($result))
         {
           ?>
+
+          <div class = "form-box-container">
           <div class = "form-box">
-            First Name <input type="text" name="newFirstName" class="form-box" value ="<?php echo $row['First_Name']; ?>">
+            <label>First Name </label><input type="text" name="newFirstName" class="form-box" value ="<?php echo $row['First_Name']; ?>">
           </div>
           <div class = "form-box">
-            Last Name <input type="text" name="newLastName" class="form-box" value ="<?php echo $row['Last_Name']; ?>">
+            <label>Last Name </label> <input type="text" name="newLastName" class="form-box" value ="<?php echo $row['Last_Name']; ?>">
           </div>
           <div class = "form-box">
-            Phone Number <input type="text" name="newPhone" class="form-box" value ="<?php echo $row['Phone_No']; ?>">
+            <label>Phone Number </label><input type="text" name="newPhone" class="form-box" value ="<?php echo $row['Phone_No']; ?>">
           </div>
           <div class = "form-box">
-            Email <input type="text" name="newEmail" class="form-box" value ="<?php echo $row['Email']; ?>">
+            <label>Email Address</label><input type="text" name="newEmail" class="form-box" value ="<?php echo $row['Email']; ?>">
           </div>
           <div class = "form-box">
-            Address <input type="text" name="newAddress" class="form-box" value ="<?php echo $row['Address']; ?>">
+            <label>Address </label><input type="text" name="newAddress" class="form-box" value ="<?php echo $row['Address']; ?>">
           </div>
 
+          <br>
           <div class = "form-box">
             <input type ="submit" name="update" class ="submit-button" value="Update">
           </div>
-
+          <br>
             <?php
         }
 ?>
@@ -65,4 +103,22 @@ if(isset($_GET["error"])){
   echo "Personal Information Updated!";
   }
 }
+
+
 ?>
+</div>
+
+<footer>
+    <h4>CONNECT</h4> <br>
+    <div class="footer-container">
+        <div id="footer-left">
+            <p>Contact us for more information</p>
+            <p>unsource@email.com</p>
+            <p>+60 12-345 6789</p>
+        </div>
+
+        <div id="footer-right">
+            <ul>Connect us on your social media</ul>
+        </div>
+    </div>
+</footer>
