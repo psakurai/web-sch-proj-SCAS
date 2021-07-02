@@ -43,7 +43,7 @@
             <div id="section-2">
                 <h3>Admin Dashboard</h3>
                 <div id="s2-left">
-                    <form name="add-user" method="POST" action="../../Function/Admin/addUser.php">
+                    <form name="add-user" method="POST">
                         <table id="myTable">
                             <tr>
                                 <th>Add User</th>
@@ -52,7 +52,7 @@
                     </form>
                 </div>
                 <div id="s2-center">
-                    <form method="POST" action="../../Function/Admin/editUser.php">
+                    <form method="POST">
                         <table id="myTable">
                             <tr>
                                 <th>Edit User</th>
@@ -67,14 +67,14 @@
         </div>
         <div id="add-user">
             <h2>Add User</h2>
-            <form method="post" id="add-user" action="../../Function/Admin/addUser.php">
+            <form method="post" id="add-user-form" onsubmit="return addUser()">
                 <div class="input-data">
                     <label for="username">Username</label>
                     <input type="text" name="username" required />
                     <label for="password">Password</label>
                     <input type="password" name="password" value="" />
                     <label for="id">Identification ID</label>
-                    <input type="number" name="id" required />
+                    <input type="number" name="identificationid" required />
                     <label for="user-level">User Level</label>
                     <input type="text" name="user-level" required />
                     <label for="first-name">First Name</label>
@@ -93,14 +93,14 @@
         </div>
         <div id="edit-user">
             <h2>Edit User</h2>
-            <form method="post" id="edit-user" action="../../Function/Admin/editUser.php">
+            <form method="post" id="edit-user-form" onsubmit="return editUser()">
                 <div class="input-data">
                     <label for="username">Username</label>
                     <input type="text" name="username" />
                     <label for="password">Password</label>
                     <input type="password" name="password" />
                     <label for="id">Identification ID</label>
-                    <input type="number" name="id" required />
+                    <input type="number" name="identificationid" required />
                     <label for="user-level">User Level</label>
                     <input type="text" name="user-level" />
                     <label for="first-name">First Name</label>
@@ -119,14 +119,15 @@
         </div>
         <div id="delete-user">
             <h2>Delete User</h2>
-            <form method="post" id="delete-user" action="../../Function/Admin/deleteUser.php">
+            <form method="post" id="delete-user-form" onsubmit="return deleteUser()">
                 <div class="input-data">
                     <label for="id">Identification ID</label>
-                    <input type="number" name="id" required />
+                    <input type="number" name="identificationid" required />
                 </div>
                 <input type="submit" name="submit" value="Delete User" />
             </form>
         </div>
     </section>
 </body>
+<script type="text/javascript" src="../../Function/Admin/manageUser.js"></script>
 </html>
