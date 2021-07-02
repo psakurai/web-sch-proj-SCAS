@@ -1,54 +1,42 @@
 let xhttp;
-window.onload = makeRequest('../../Function/Manager/getViewWeek.php', 'mangkoran');
+let reqcnt = '../../Function/Manager/getRequestCount.php';
+let accreqcnt = '../../Function/Manager/getAccetedRequestCount.php';
 
-// function getViewInterval() {
-//     var xhttp;
-//     xhttp = new XMLHttpRequest();
-//     // xhttp.onreadystatechange = window.setInterval();
-// }
+window.onload = setInterval(function () { makeRequest(reqcnt); }, 1000);
 
-// function getViewWeek() {
-//     let xhttp;
-//     xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function () {
-//         document.getElementById('view-week').value = "100";
-//     };
-// }
-
-// function getViewMonth() {
-//     let xhttp;
-//     xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function () {
-//         document.getElementById("view-month").innerHTML = "200";
-//     };
-// }
-
-function makeRequest(url, userName) {
+function makeRequest(url) {
     xhttp = new XMLHttpRequest();
 
     if (!xhttp) {
         alert('Giving up :( Cannot create an XMLHTTP instance ');
         return false;
     }
-    xhttp.onreadystatechange = alertContents;
-    xhttp.open('POST', url);
+    xhttp.onreadystatechange = updateRequestCount;
+    xhttp.open('GET', url);
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhttp.send('userName=' + encodeURIComponent(userName));
+    xhttp.send();
 }
 
-function alertContents() {
+function updateRequestCount() {
     if (xhttp.readyState === XMLHttpRequest.DONE) {
         if (xhttp.status === 200) {
             console.log(xhttp.responseText);
             let response = JSON.parse(xhttp.responseText);
-            document.getElementById("view-month").value = response.resultCnt;
-            alert(response.resultCnt);
+            document.getElementById("request").value = response.resultCnt;
         } else {
-            alert('There was a problem with the request.');
+
         }
     }
 }
 
-function updateViewWeek() {
+function updateAcceptedRequestCount() {
+    if (xhttp.readyState === XMLHttpRequest.DONE) {
+        if (xhttp.status === 200) {
+            console.log(xhttp.responseText);
+            let response = JSON.parse(xhttp.responseText);
+            document.getElementById("accepted-request").value = response.accResultCnt;
+        } else {
 
+        }
+    }
 }
