@@ -2,18 +2,18 @@
 session_start();
 require '../Init/config.php';
 
-$currentUserID = $_SESSION['USER'];
+$currentUser = $_SESSION['USER'];
 $collegeName = $_POST['college-name'];
 $buildingNo = $_POST['building-no'];
 $status = '0';
 
-$sqlApplyCollege = "INSERT INTO Result (
-    Identification_ID,
+$sqlApplyCollege = "INSERT INTO Application (
+    Username,
     College_Name,
     Building_No,
     Status
     ) VALUES (
-    '$currentUserID',
+    '$currentUser',
     '$collegeName',
     '$buildingNo',
     '$status'
