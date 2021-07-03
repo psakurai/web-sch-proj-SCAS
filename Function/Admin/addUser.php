@@ -26,7 +26,7 @@ $sql = "INSERT INTO User VALUES (
     )";
 
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>User added successfully</h3>";
+    echo "User added successfully";
 } else {
     echo "Error adding user: " . mysqli_error($conn);
 }
