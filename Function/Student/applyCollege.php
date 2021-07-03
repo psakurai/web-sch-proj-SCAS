@@ -2,19 +2,21 @@
 session_start();
 require '../Init/config.php';
 
-$currentUserID = $_SESSION['ID'];
+$currentUserID = $_SESSION['USER'];
 $collegeName = $_POST['college-name'];
 $buildingNo = $_POST['building-no'];
+$status = '0';
 
 $sqlApplyCollege = "INSERT INTO Result (
-    'Identification_ID',
-    'College_Name'
-    'Building_No',
-    'Status'
+    Identification_ID,
+    College_Name,
+    Building_No,
+    Status
     ) VALUES (
     '$currentUserID',
     '$collegeName',
-    '$buildingNo'
+    '$buildingNo',
+    '$status'
 )";
 
 if (mysqli_query($conn, $sqlApplyCollege)) {

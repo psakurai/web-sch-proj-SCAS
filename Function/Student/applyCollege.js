@@ -1,11 +1,11 @@
 const applyCollege = () => {
     const applyCollegeUrl = '../../Function/Student/applyCollege.php';
-    const applyCollegeForm = document.getElementById('apply-college-form');
-    const callMakeRequest = makeRequest(applyCollegeUrl, applyCollegeForm);
+    const applyCollegeFormElements = document.getElementById('apply-college-form').elements;
+    const callMakeRequest = makeRequest(applyCollegeUrl, applyCollegeFormElements);
     return false;
 }
 
-const makeRequest = (url, form) => {
+const makeRequest = (url, formElements) => {
     const xhttp = new XMLHttpRequest();
 
     if (!xhttp) {
@@ -17,12 +17,15 @@ const makeRequest = (url, form) => {
         if (xhttp.readyState === XMLHttpRequest.DONE) {
             if (xhttp.status === 200) {
                 // console.log(xhttp.responseText);
-                const response = JSON.parse(xhttp.responseText);
-                update(response);
+                // const response = JSON.parse(xhttp.responseText);
+                // update(response);
             }
         }
     };
     xhttp.open('POST', url);
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhttp.send();
+    xhttp.send(
+        'college-name=' + encodeURIComponent(formElements['college-name'].value) +
+        '&building-no=' + encodeURIComponent(formElements['building-no'].value)
+    );
 }
