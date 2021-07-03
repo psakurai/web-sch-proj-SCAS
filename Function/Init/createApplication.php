@@ -6,7 +6,7 @@
       College_Name VARCHAR(255) NOT NULL,
       Building_No VARCHAR(255) NOT NULL,
       Status TINYINT NOT NULL,
-      Manager_ID INT,
+      Manager_Username VARCHAR(255),
       PRIMARY KEY (Result_ID),
       FOREIGN KEY (College_Name, Building_No) REFERENCES College(College_Name, Building_No)
   )";
