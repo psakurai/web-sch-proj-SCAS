@@ -3,7 +3,7 @@
   $sql = "CREATE TABLE College (
       College_Name VARCHAR(255) NOT NULL,
       Building_No VARCHAR(255) NOT NULL,
-      Capacity INT NOT NULL
+      Capacity INT NOT NULL,
       PRIMARY KEY (College_Name, Building_No)
   )";
 
