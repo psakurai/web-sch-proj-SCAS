@@ -25,7 +25,7 @@ const updateRejectedRequestCount = (responseText) => {
     document.getElementById("rejected-request").value = response.rejResultCnt;
 }
 
-const makeRequest = (url, update) => {
+const makeRequest = (url, updateFunction) => {
     const xhttp = new XMLHttpRequest();
 
     if (!xhttp) {
@@ -38,7 +38,7 @@ const makeRequest = (url, update) => {
             if (xhttp.status === 200) {
                 // console.log(xhttp.responseText);
                 const response = JSON.parse(xhttp.responseText);
-                update(response);
+                updateFunction(response);
             }
         }
     };
