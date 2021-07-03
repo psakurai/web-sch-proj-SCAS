@@ -2,9 +2,9 @@
   require ("config.php");
   $sql = "CREATE TABLE Approval (
       ManagerID INT NOT NULL AUTO_INCREMENT,
-      IdentificationID VARCHAR(255) NOT NULL,
+      Username VARCHAR(255) VARCHAR(255) NOT NULL,
       PRIMARY KEY (ManagerID),
-      FOREIGN KEY (IdentificationID) REFERENCES User(IdentificationID)
+      FOREIGN KEY (Username) REFERENCES User(Username)
   )";
 
   if (mysqli_query($conn, $sql)) {
