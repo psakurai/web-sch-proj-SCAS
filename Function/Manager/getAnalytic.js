@@ -8,20 +8,14 @@ window.onload = setInterval(() => {
 }, 1000);
 
 const updateRequestCount = (response) => {
-    console.log(response);
-    // const response = JSON.parse(responseText);
     document.getElementById("request").value = response.resultCnt;
 }
 
 const updateAcceptedRequestCount = (response) => {
-    console.log(response);
-    // const response = JSON.parse(responseText);
     document.getElementById("accepted-request").value = response.accResultCnt;
 }
 
-const updateRejectedRequestCount = (responseText) => {
-    console.log(responseText);
-    const response = JSON.parse(responseText);
+const updateRejectedRequestCount = (response) => {
     document.getElementById("rejected-request").value = response.rejResultCnt;
 }
 
@@ -36,7 +30,6 @@ const makeRequest = (url, updateFunction) => {
     xhttp.onreadystatechange = () => {
         if (xhttp.readyState === XMLHttpRequest.DONE) {
             if (xhttp.status === 200) {
-                // console.log(xhttp.responseText);
                 const response = JSON.parse(xhttp.responseText);
                 updateFunction(response);
             }
