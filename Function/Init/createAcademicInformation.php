@@ -2,12 +2,12 @@
   require ("config.php");
   $sql = "CREATE TABLE Academic_Information (
       InfoID INT AUTO_INCREMENT NOT NULL,
-      IdentificationID VARCHAR(255) NOT NULL,
+      Username VARCHAR(255) NOT NULL,
       Study_Level VARCHAR(255) NOT NULL,
       Year INT NOT NULL,
       Semester INT NOT NULL,
       PRIMARY KEY (InfoID),
-      FOREIGN KEY (IdentificationID) REFERENCES User(IdentificationID)
+      FOREIGN KEY (Username) REFERENCES User(Username)
   )";
 
   if (mysqli_query($conn, $sql)) {
