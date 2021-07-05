@@ -5,6 +5,6 @@
     $db_name='mydatabase';
 
     // $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die("Unable to connect");
-    // echo"Connected Successfully";
+    echo"Connected Successfully";
     $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 ?>

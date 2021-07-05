@@ -1,9 +1,9 @@
 <?php
   require ("config.php");
   $sql = "CREATE TABLE Approval (
-      ManagerID INT NOT NULL AUTO_INCREMENT,
-      Username VARCHAR(255) VARCHAR(255) NOT NULL,
-      PRIMARY KEY (ManagerID),
+      Manager_Username VARCHAR(255) NOT NULL,
+      Username VARCHAR(255) NOT NULL,
+      PRIMARY KEY (Manager_Username),
       FOREIGN KEY (Username) REFERENCES User(Username)
   )";
 

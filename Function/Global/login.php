@@ -1,35 +1,36 @@
 <?php
 session_start();
 
-require('Init/config.php');
+require('../Init/config.php');
 
 $myusername=$_POST["Username"];
 $mypassword=$_POST["Password"];
 
-$sql="SELECT * FROM User WHERE Username='$myusername' AND Password='$mypassword'";
+$sql="SELECT * FROM User WHERE Username='$myusername' and Password='$mypassword'";
 
 $result = mysqli_query($conn, $sql);
 
-$rows=mysqli_query($result);
+$rows=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-$user_name=$rows["Username"];
-$user_level=$rows["User_Level"];
-
-$count=mysqli_fetch_assoc($result);
+$count=mysqli_num_rows($result);
 
 if($count==1){
+$user_name=$rows["Username"];
+$user_password=$rows["Password"];
+$user_level=$rows["User_Level"];
 
 $_SESSION["Login"] = "YES";
 $_SESSION["USER"] = $user_name;
+$_SESSION["PASSWORD"] = $user_password;
 $_SESSION["LEVEL"] =$user_level;
 
 echo "<h2>You are now logged in as ".$_SESSION["USER"]." with access level ".$_SESSION["LEVEL"]."</h2>";
-switch ($count['User_Level']) {
+switch ($user_level) {
 case "Admin":
 	header("Location: ../../User/Admin/mainAdmin.html");
 	break;
 case "Manager":
-	header("Location: ./../User/Manager/mainManager.html");
+	header("Location: ../../User/Manager/mainManager.html");
 	break;
 case "Student":
 	header("Location: ../../User/Student/mainStudent.html");
