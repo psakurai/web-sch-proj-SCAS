@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../Assets/css/style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-container-left">
+                <div><a href="mainAdmin.html"> HOME </a></div>
+            </div>
+            <div class="header-container-right">
+                <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>
+                <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="body-container">
+            <div id="background">
+                <div id="background-center">
+                    <h1>Welcome to University!</h1>
+                </div>
+            </div>
+            <div id="section-2">
+                <h3>Admin Dashboard</h3>
+                <div id="edit-user">
+                    <h2>Edit User</h2>
+                    <form method="post" id="edit-user-form" onsubmit="return editUser()">
+                        <div class="input-data">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" /><br>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" /><br>
+                            <label for="id">Identification ID</label>
+                            <input type="number" name="identificationid" required /><br>
+                            <label for="user-level">User Level</label>
+                            <input type="text" name="user-level" /><br>
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" /><br>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" /><br>
+                            <label for="phone">Phone No</label>
+                            <input type="text" name="phone" /><br>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" /><br>
+                            <label for="address">Address</label>
+                            <input type="text" name="address" /><br>
+                        </div>
+                        <input type="submit" name="submit" value="Edit User" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script type="text/javascript" src="../../Function/Admin/manageUser.js"></script>
+</html>

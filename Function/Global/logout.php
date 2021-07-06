@@ -6,6 +6,6 @@ if (isset($_SESSION['USER'])) {
 }
 session_destroy();
 
-header('Location: index.php');
+header('Location: ../../Login/index.html');
 exit;
 ?>

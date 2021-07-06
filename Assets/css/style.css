@@ -12,7 +12,10 @@ table {
     margin-left: 80px;
     text-align: left;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 th {
     padding: 15px;
     width: auto;
@@ -49,75 +52,9 @@ header {
 .header-container > div > div {
     margin: 15px 30px 15px 15px;
 }
-
-.wrap-icon-menu {
-    position: fixed;
-    right: 0px;
-    top: 58px;
-    bottom: 0px;
-    opacity: 0px;
-    width: 300px;
-    visibility: hidden;
-    background: #dfe1e8;
-}
 .header-container > ul {
     list-style: none;
 }
-.subnav {
- float: left;
- overflow: hidden;
- display: block;
- margin: 4px;
- height: 20px;
- width:60px;
- background: black;
- border-radius: 9px;
-}
-.subnav .subnavbtn {
- font-size: 16px;
- border: none;
- outline: none;
- color: white;
- padding: 14px 16px;
- background-color: inherit;
- font-family: inherit;
- margin: 0;
-}
-.navbar a {
- background-color: blue;
-}
-.navbar a:hover, .subnav:hover{
- background-color: grey;
-}
-.subnav-content {
- display: none;
- position: absolute;
- right: 10;
- height: 115px;
- margin-top: -10px;
- padding: 0px 0px 0px 30px;
- background-color: grey;
-
-}
-.subnav-content a {
- float: left;
- color: black;
- text-decoration: none;
- padding: 10px 20px;
- font-size: 15px;
-}
-.subnav-content a:hover {
- background-color: #eee;
- color: black;
- margin-left: -50px;
- width: 110%;
- text-align: right;
- font-size: 16px;
-}
-.subnav:hover .subnav-content {
- display: block;
-}
-
 /* body section */
 #background {
     position: fixed;

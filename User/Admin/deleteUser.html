@@ -25,35 +25,19 @@
             </div>
             <div id="section-2">
                 <h3>Admin Dashboard</h3>
-                <div id="s2-left">
-                    <form name="add-user" method="POST">
-                        <table id="myTable">
-                            <tr>
-                                <th><div><a href="addUser.html"> Add User </a></div></th>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-                <div id="s2-center">
-                    <form method="POST">
-                        <table id="myTable">
-                            <tr>
-                                <th><div><a href="editUser.html"> Edit User </a></div></th>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-                <div id="s2-right">
-                    <form method="POST">
-                        <table id="myTable">
-                            <tr>
-                                <th><div><a href="deleteUser.html"> Delete User </a></div></th>
-                            </tr>
-                        </table>
+                <div id="delete-user">
+                    <h2>Delete User</h2>
+                    <form method="post" id="delete-user-form" onsubmit="return deleteUser()">
+                        <div class="input-data">
+                            <label for="id">Identification ID</label>
+                            <input type="number" name="identificationid" required /><br>
+                        </div>
+                        <input type="submit" name="submit" value="Delete User" />
                     </form>
                 </div>
             </div>
         </div>
+
     </section>
 </body>
 <script type="text/javascript" src="../../Function/Admin/manageUser.js"></script>
