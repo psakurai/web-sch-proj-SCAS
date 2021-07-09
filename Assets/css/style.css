@@ -285,7 +285,7 @@ footer {
 
 .title-view-profile
 {
-  margin:100px 100px 40px 100px;
+  margin:100px 00px 40px 0px;
 }
 
 .profile-section
@@ -300,9 +300,7 @@ footer {
 
 .edit-profile-button
 {
-  float:right;
 }
-
 .edit-profile-button a
 {
   text-decoration:none;
