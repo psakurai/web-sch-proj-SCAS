@@ -1,10 +1,10 @@
 <?php
 require "../Init/config.php";
 
-$id = $_POST["id"];
+$username = $_POST["username"];
 
 $sql = "DELETE FROM User WHERE
-        IdentificationID = '$id'";
+        Username = '$username'";
 
 if (mysqli_query($conn, $sql)) {
     echo "<h3>User deleted successfully</h3>";

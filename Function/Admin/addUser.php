@@ -4,7 +4,6 @@ require "../Init/config.php";
 
 $username = $_POST["username"];
 $password = $_POST["password"];
-$id = $_POST["id"];
 $userlevel = $_POST["user-level"];
 $firstname = $_POST["first-name"];
 $lastname = $_POST["last-name"];
@@ -16,7 +15,6 @@ $address = $_POST["address"];
 $sql = "INSERT INTO User VALUES (
     '$username',
     '$password',
-    '$id',
     '$userlevel',
     '$firstname',
     '$lastname',

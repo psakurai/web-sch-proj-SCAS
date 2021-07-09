@@ -4,7 +4,6 @@ require "../Init/config.php";
 
 $username = $_POST["username"];
 $password = $_POST["password"];
-$id = $_POST["id"];
 $userlevel = $_POST["user-level"];
 $firstname = $_POST["first-name"];
 $lastname = $_POST["last-name"];
@@ -22,8 +21,8 @@ $sql = "UPDATE User
     Phone_No = CASE WHEN '$phone' = '' THEN Phone_No ELSE '$phone' END,
     Email = CASE WHEN '$email' = '' THEN Email ELSE '$email' END,
     Address = CASE WHEN '$address' = '' THEN Address ELSE '$address' END
-    WHERE IdentificationID = '$id'";
-$columncheck = "SELECT EXISTS (SELECT * FROM User WHERE IdentificationID = '$id')";
+    WHERE Username = '$username'";
+$columncheck = "SELECT EXISTS (SELECT * FROM User WHERE Username = '$username')";
 
 if (mysqli_query($conn, $sql)) {
     // mysqli_query($conn, $sql);
