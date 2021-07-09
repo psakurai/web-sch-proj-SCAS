@@ -17,7 +17,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
         </div>
     </div>
 </header>
-
+<br><br><br><br><br>
 
 <?php
   $currentUser = $_SESSION["USER"];

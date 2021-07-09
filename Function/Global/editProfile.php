@@ -7,35 +7,16 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 ?>
 
 <header>
-    <div class="header-container">
-        <div class="header-container-left">
-            <div id="nav_home"> HOME </div>
-        </div>
-        <div class="header-container-right">
-            <div id="nav_apply"> APPLY ROOM </div>
-            <div id="nav_view"> VIEW ROOM </div>
-            <div id="wrap-icon">
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-        </div>
-    </div>
-    <div class="wrap-icon-menu">
-        <ul id="menu-opt">
-            <li>
-                <a>MY PROFILE</a>
-            </li>
-            <li>
-                <a> SETTING </a>
-            </li>
-            <li>
-                <a> SIGN OUT </a>
-            </li>
-        </ul>
-    </div>
+  <div class="header-container">
+      <div class="header-container-left">
+          <div id="nav_home"> HOME </div>
+      </div>
+      <div class="header-container-right">
+        <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
+      </div>
+  </div>
 </header>
-
+<br><br><br><br><br>
 <div class = "nav-bar-container">
 <nav class = "navigation-bar-edit-profile">
   <ul>
