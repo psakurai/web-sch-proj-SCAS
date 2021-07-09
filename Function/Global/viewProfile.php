@@ -31,8 +31,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
         </div>
     </div>
 </header>
-<br><br><br><br><br>
-
+<div id="background"></div>
 <?php
   $currentUser = $_SESSION["USER"];
   $sql = "SELECT * FROM User WHERE Username = '$currentUser'";
@@ -44,13 +43,13 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
         {
           ?>
             <div class = "title-view-profile"><hr>
-              <div class = "edit-profile-button" style="text-align:right;padding-right:125px;">
+              <div class = "edit-profile-button" style="text-align:right;padding-right:113px;">
                 <a href = editProfile.php>Edit Profile</a>
               </div>
               <hr>
             </div>
 
-          <div class = "profile-table-container"><h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
+          <div class = "profile-table-container" style="padding-bottom:60px;"><h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
           <table class = "profile-table">
           <div class = "profile-section"><h3><u>Personal Information</u></h3></div>
           <tr>

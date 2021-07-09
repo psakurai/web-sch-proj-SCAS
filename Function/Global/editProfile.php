@@ -16,11 +16,11 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
       </div>
   </div>
 </header>
-<br><br><br><br><br>
+<div id="background"></div>
 <div class = "nav-bar-container">
 <nav class = "navigation-bar-edit-profile"><hr>
     <div style="text-align:right;padding-right:35px;">
-      <a href = editPassword.php style="text-align:right;padding-right:24px;">Change Password</a><br>
+      <a href = editPassword.php style="text-align:right;margin-right:24px;">Change Password</a><br>
       <?php
         if($_SESSION["LEVEL"] === "Student")
         {
@@ -85,8 +85,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
               <br>
               <div class = "form-box">
                 <tr>
-                  <td></td>
-                  <td><input type ="submit" name="update" class ="submit-button" value="Update"></td>
+                  <td colspan="2"><input type ="submit" name="update" class ="submit-button" value="Update" id="button-update"></td>
                 </tr>
 
               </div>
@@ -112,18 +111,3 @@ if(isset($_GET["error"])){
 
 ?>
 </div>
-
-<footer>
-    <h4>CONNECT</h4> <br>
-    <div class="footer-container">
-        <div id="footer-left">
-            <p>Contact us for more information</p>
-            <p>unsource@email.com</p>
-            <p>+60 12-345 6789</p>
-        </div>
-
-        <div id="footer-right">
-            <ul>Connect us on your social media</ul>
-        </div>
-    </div>
-</footer>

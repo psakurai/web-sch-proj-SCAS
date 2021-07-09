@@ -78,23 +78,13 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
                   </tr>
 
                   <tr>
-                  <td align="left"><b>Identification ID   : </b></td>
-                  <td><?php echo $rows['IdentificationID']; ?></td>
-                  </tr>
-
-                  <tr>
                   <td align="left"><b>Building No         : </b></td>
                   <td><?php echo $rows['Building_No']; ?></td>
                   </tr>
 
                   <tr>
-                  <td align="left"><b>Room No             : </b></td>
-                  <td><?php echo $rows['Room_No']; ?></td>
-                  </tr>
-
-                  <tr>
                   <td align="left"><b>Approved by         : </b></td>
-                  <td><?php echo $rows['ManagerID']; ?></td>
+                  <td><?php echo $rows['Manager_Username']; ?></td>
                   </tr>
 
                   <?php }
@@ -110,17 +100,16 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
     </section>
 
     <footer>
-        <h4>CONNECT</h4> <br>
         <div class="footer-container">
-            <div id="footer-left">
-                <p>Contact us for more information</p>
-                <p>unsource@email.com</p>
-                <p>+60 12-345 6789</p>
-            </div>
-
-            <div id="footer-right">
-                <ul>Connect us on your social media</ul>
-            </div>
-        </div>
+          <h4> © 2021 OpenSus Ltd. All rights reserved.</h4><br>
+          <p>Use of this site constitutes acceptance of our User Agreement effective 10/7/2021) and Privacy Policy effective 10/7/2021) OpenSus Ltd may earn a portion of sales from products that are purchased through our site as part of our Afiliate Partnerships with retailers. Your Malaysia Privacy Rights (effective 10/7/2021) The material on this site may not be reproduced distributed, transmitted cached or otherwise used, except with prior written permission of OpenSus Ltd</p><br>
+          <hr>
+          <p>
+          <a href="https://twitter.com"><img src="../../Assets/png/twitter.png" alt="Twitter" style="width:20px;height:20px"></a>
+          <a href="https://instagram.com"><img src="../../Assets/png/instagram.png" alt="Instagram"style="width:27px;height:21px"></a>
+          <a href="mailto: admin@OpenSus.com"><img src="../../Assets/png/email.png" alt="Email"style="width:22px;height:22px"></a>
+          </p>
+          <hr id="bottom-padding">
+          </div>
     </footer>
 </body>
