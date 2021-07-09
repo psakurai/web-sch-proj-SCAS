@@ -1,7 +1,7 @@
 <?php
 require "../Init/config.php";
 
-if ($result = mysqli_query($conn, 'SELECT * FROM Result')) {
+if ($result = mysqli_query($conn, 'SELECT * FROM Application')) {
     $result_cnt = mysqli_num_rows($result);
 }
 $return = ['resultCnt' => $result_cnt];

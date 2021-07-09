@@ -35,7 +35,7 @@
                 <th>Total Request</th>
               </tr>
               <tr>
-                <td><input id="request" name="student-count" type="number"></td>
+                <td><input id="request" name="total-request" type="number"></td>
               </tr>
               <tr>
                 <td>
@@ -56,7 +56,7 @@
                 <th>Total Accepted Request</th>
               </tr>
               <tr>
-                <td><input id="accepted-request" name="req-count" type="number"></td>
+                <td><input id="accepted-request" name="accepted-request" type="number"></td>
               </tr>
               <tr>
                 <td>
@@ -76,7 +76,7 @@
                 <th>Total Rejected Request</th>
               </tr>
               <tr>
-                <td><input id="rejected-request" name="rej-count" type="number"></td>
+                <td><input id="rejected-request" name="rejected-request" type="number"></td>
               </tr>
               <tr>
                 <td>
