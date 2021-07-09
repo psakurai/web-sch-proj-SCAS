@@ -9,7 +9,7 @@
   <header>
     <div class="header-container">
         <div class="header-container-left">
-            <div> HOME </div>
+            <div><a href="mainManager.php"></a> HOME </div>
         </div>
         <div class="header-container-right">
             <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>

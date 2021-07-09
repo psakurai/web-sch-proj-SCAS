@@ -18,16 +18,17 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 </header>
 <br><br><br><br><br>
 <div class = "nav-bar-container">
-<nav class = "navigation-bar-edit-profile">
-  <ul>
-    <?php
-      if($_SESSION["LEVEL"] === "Student")
-      {
-        echo "<li><a href = ../Student/editAcademicInfo.php>Academic Information</a></li>";
-      }
-    ?>
-    <li><a href = editPassword.php>Change Password</a></li>
-  </ul>
+<nav class = "navigation-bar-edit-profile"><hr>
+    <div style="text-align:right;padding-right:35px;">
+      <a href = editPassword.php>Change Password</a>
+      <?php
+        if($_SESSION["LEVEL"] === "Student")
+        {
+          echo "<a href = ../Student/editAcademicInfo.php>Academic Information</a>";
+        }
+      ?>
+    </div>
+  <hr>
 </nav>
 </div>
 
@@ -44,27 +45,53 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
           ?>
 
           <div class = "form-box-container">
-          <div class = "form-box">
-            <label>First Name </label><input type="text" name="newFirstName" class="form-box" value ="<?php echo $row['First_Name']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Last Name </label> <input type="text" name="newLastName" class="form-box" value ="<?php echo $row['Last_Name']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Phone Number </label><input type="text" name="newPhone" class="form-box" value ="<?php echo $row['Phone_No']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Email Address</label><input type="text" name="newEmail" class="form-box" value ="<?php echo $row['Email']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Address </label><input type="text" name="newAddress" class="form-box" value ="<?php echo $row['Address']; ?>">
-          </div>
+            <table>
+              <div class = "form-box">
+                <tr>
+                  <td><label>First Name </label></td>
+                  <td><input type="text" name="newFirstName" class="form-box" value ="<?php echo $row['First_Name']; ?>"></td>
+                </tr>
 
-          <br>
-          <div class = "form-box">
-            <input type ="submit" name="update" class ="submit-button" value="Update">
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Last Name </label> </td>
+                  <td><input type="text" name="newLastName" class="form-box" value ="<?php echo $row['Last_Name']; ?>"></td>
+                </tr>
+
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Phone Number </label></td>
+                  <td><input type="text" name="newPhone" class="form-box" value ="<?php echo $row['Phone_No']; ?>"></td>
+                </tr>
+
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Email Address</label></td>
+                  <td><input type="text" name="newEmail" class="form-box" value ="<?php echo $row['Email']; ?>"></td>
+                </tr>
+
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Address </label></td>
+                  <td><input type="text" name="newAddress" class="form-box" value ="<?php echo $row['Address']; ?>"></td>
+                </tr>
+
+              </div>
+
+              <br>
+              <div class = "form-box">
+                <tr>
+                  <td></td>
+                  <td><input type ="submit" name="update" class ="submit-button" value="Update"></td>
+                </tr>
+
+              </div>
+            </table>
           </div>
-          <br>
             <?php
         }
 ?>

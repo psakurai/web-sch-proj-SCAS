@@ -47,13 +47,10 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
               <div class = "edit-profile-button" style="text-align:right;padding-right:35px;">
                 <a href = editProfile.php>Edit Profile</a>
               </div>
-              <h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
-
               <hr>
             </div>
 
-          <div class = "profile-table-container">
-          <div class = "profile-section"><h2><u>Personal Information</u></h2></div>
+          <div class = "profile-table-container"><h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
           <table class = "profile-table">
           <tr>
               <td><th>Username</th><td>

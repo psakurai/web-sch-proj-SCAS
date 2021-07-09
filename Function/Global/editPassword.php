@@ -16,16 +16,17 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 </header>
 <br><br><br><br><br>
 <div class = "nav-bar-container">
-<nav class = "navigation-bar-edit-profile">
-  <ul>
-    <li><a href = editProfile.php>Personal Information</a></li>
+<nav class = "navigation-bar-edit-profile"><hr>
+  <div style="text-align:right;padding-right:35px;">
+    <a href = editProfile.php>Personal Information</a>
     <?php
       if($_SESSION["LEVEL"] === "Student")
       {
-        echo "<li><a href = ../Student/editAcademicInfo.php>Academic Information</a></li>";
+        echo "<a href = ../Student/editAcademicInfo.php>Academic Information</a>";
       }
     ?>
-  </ul>
+  </div>
+<hr>
 </nav>
 </div>
 
@@ -42,23 +43,33 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
         {
           ?>
           <div class = "form-box-container">
-          <div class = "form-box">
-            <label>Current Password</label> <input type="password" name="currentPassword" class="form-box">
-          </div>
-
-          <div class = "form-box">
-            <label>New Password (Minimum 6 characters)</label><input type="password" name="newPassword" class="form-box">
-          </div>
-
-          <div class = "form-box">
-            <label>Re-enter New Password </label><input type="password" name="newRepeatPassword" class="form-box">
-          </div>
-
-          <br>
-          <div class = "form-box">
-            <input type ="submit" name="update_Password" class ="submit-button" value="Update">
-          </div>
-          <br>
+          <table>
+            <div class = "form-box">
+              <tr>
+                <td><label>Current Password</label></td>
+                <td><input type="password" name="currentPassword" class="form-box"></td>
+              </tr>
+            </div>
+            <div class = "form-box">
+              <tr>
+                <td><label>New Password (Minimum 6 characters)</label></td>
+                <td><input type="password" name="newPassword" class="form-box"></td>
+              </tr>
+            </div>
+            <div class = "form-box">
+              <tr>
+                <td><label>Re-enter New Password </label></td>
+                <td><input type="password" name="newRepeatPassword" class="form-box"></td>
+              </tr>
+            </div>
+            <br>
+            <div class = "form-box">
+              <tr>
+                <td></td>
+                <td><input type ="submit" name="update_Password" class ="submit-button" value="Update"></td>
+              </tr>
+            </div>
+          </table></div>
             <?php
         }
 ?>
