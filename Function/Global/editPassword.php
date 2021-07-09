@@ -52,9 +52,9 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 
 <form action ="updateInformation.php" method="post">
 <?php
-  $currentUser = $_SESSION["ID"];
+  $currentUser = $_SESSION["USER"];
 
-  $sql = "SELECT * FROM User WHERE IdentificationID = '$currentUser'";
+  $sql = "SELECT * FROM User WHERE Username = '$currentUser'";
   $result = mysqli_query($conn,$sql);
 
   if($result)
