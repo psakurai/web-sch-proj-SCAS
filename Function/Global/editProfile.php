@@ -9,9 +9,9 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <header>
   <div class="header-container">
       <div class="header-container-left">
-          <div id="nav_home"> HOME </div>
       </div>
       <div class="header-container-right">
+        <div><a href = viewProfile.php>BACK</a></div>
         <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
       </div>
   </div>
@@ -20,8 +20,6 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <div class = "nav-bar-container">
 <nav class = "navigation-bar-edit-profile">
   <ul>
-    <li><a href = viewProfile.php>Back</a></li>
-    <li><a href = editProfile.php class="active">Personal Information</a></li>
     <?php
       if($_SESSION["LEVEL"] === "Student")
       {

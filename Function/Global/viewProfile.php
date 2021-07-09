@@ -10,9 +10,23 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <header>
     <div class="header-container">
         <div class="header-container-left">
-            <div id="nav_home"> HOME </div>
         </div>
         <div class="header-container-right">
+          <?php
+            switch ($_SESSION["LEVEL"]) {
+            case "Admin":
+              echo "<div><a href = ../../User/Admin/mainAdmin.html>BACK</a></div>";
+              break;
+            case "Manager":
+              echo "<div><a href = ../../User/Manager/mainManager.php>BACK</a></div>";
+              break;
+            case "Student":
+              echo "<div><a href = ../../User/Student/mainStudent.html>BACK</a></div>";
+              break;
+            default:
+                echo "No User Level!";
+            }
+          ?>
           <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
         </div>
     </div>
@@ -29,11 +43,11 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
       while($row = mysqli_fetch_array($result))
         {
           ?>
-            <div class = "title-view-profile">
-              <div class = "edit-profile-button">
-                <a href = editProfile.php>Edit profile</a>
+            <div class = "title-view-profile"><hr>
+              <div class = "edit-profile-button" style="text-align:right;padding-right:35px;">
+                <a href = editProfile.php>Edit Profile</a>
               </div>
-              <h1><?php echo $row['First_Name'] ; ?> 's Profile
+              <h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
 
               <hr>
             </div>
