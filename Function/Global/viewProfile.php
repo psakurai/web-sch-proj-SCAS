@@ -21,7 +21,6 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 
 <?php
   $currentUser = $_SESSION["USER"];
-  $currentUserID = $_SESSION["ID"];
   $sql = "SELECT * FROM User WHERE Username = '$currentUser'";
   $result = mysqli_query($conn,$sql);
 
@@ -83,8 +82,8 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 
       if($_SESSION["LEVEL"] === "Student")
       {
-        $currentUser2 = $_SESSION["ID"];
-        $sql2 = "SELECT * FROM academic_information WHERE IdentificationID = '$currentUser2'";
+        $currentUser2 = $_SESSION["USER"];
+        $sql2 = "SELECT * FROM Academic_Information WHERE Username = '$currentUser2'";
         $result2 = mysqli_query($conn,$sql2);
 
         if($result2)
