@@ -8,7 +8,7 @@
       Status TINYINT NOT NULL,
       Manager_Username VARCHAR(255),
       PRIMARY KEY (Result_ID),
-      FOREIGN KEY (Manager_Username) REFERENCES Approval(Manager_Username),
+      FOREIGN KEY (Username) REFERENCES User(Username),
       FOREIGN KEY (College_Name, Building_No) REFERENCES College(College_Name, Building_No)
   )";
 
