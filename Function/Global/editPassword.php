@@ -54,7 +54,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <?php
   $currentUser = $_SESSION["ID"];
 
-  $sql = "SELECT * FROM user WHERE IdentificationID = '$currentUser'";
+  $sql = "SELECT * FROM User WHERE IdentificationID = '$currentUser'";
   $result = mysqli_query($conn,$sql);
 
   if($result)
