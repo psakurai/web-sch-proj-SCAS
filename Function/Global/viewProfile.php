@@ -43,6 +43,12 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
           <div class = "profile-section"><h2><u>Personal Information</u></h2></div>
           <table class = "profile-table">
           <tr>
+              <td><th>Username</th><td>
+              <td>:</td>
+              <td><?php echo $row['Username'] ; ?></td>
+          </tr>
+
+          <tr>
             <td><th>First Name</th><td>
             <td>:</td>
             <td><?php echo $row['First_Name'] ; ?></td>
@@ -52,12 +58,6 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
             <td><th>Last Name</th><td>
             <td>:</td>
             <td><?php echo $row['Last_Name'] ; ?></td>
-          </tr>
-
-          <tr>
-            <td><th>Identification ID</th><td>
-            <td>:</td>
-            <td><?php echo $row['IdentificationID'] ; ?></td>
           </tr>
 
           <tr>
@@ -120,18 +120,3 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
       ?>
       </div>
 <br><br>
-
-<footer>
-    <h4>CONNECT</h4> <br>
-    <div class="footer-container">
-        <div id="footer-left">
-            <p>Contact us for more information</p>
-            <p>unsource@email.com</p>
-            <p>+60 12-345 6789</p>
-        </div>
-
-        <div id="footer-right">
-            <ul>Connect us on your social media</ul>
-        </div>
-    </div>
-</footer>

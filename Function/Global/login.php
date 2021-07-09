@@ -30,7 +30,7 @@ case "Admin":
 	header("Location: ../../User/Admin/mainAdmin.html");
 	break;
 case "Manager":
-	header("Location: ../../User/Manager/mainManager.html");
+	header("Location: ../../User/Manager/mainManager.php");
 	break;
 case "Student":
 	header("Location: ../../User/Student/mainStudent.html");
