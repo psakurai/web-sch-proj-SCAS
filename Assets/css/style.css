@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica;
+    font-family: /*'Montserrat',*/Arial, Helvetica;
     margin: 0px 0px -19px 0px;
 }
 
@@ -12,10 +12,12 @@ table {
     margin-left: 80px;
     text-align: left;
 }
+
 a {
   text-decoration: none;
   color: black;
 }
+
 th {
     padding: 15px;
     width: auto;
@@ -52,6 +54,19 @@ header {
 .header-container > div > div {
     margin: 15px 30px 15px 15px;
 }
+
+.header-container > div > div > a {
+    text-decoration: none;
+    color: #212122;
+}
+
+.header-container > div > div > a:hover {
+    color: #212122;
+    padding-bottom: 5px;
+    border-bottom:3px solid #212122;
+    text-shadow: 0px 0px 1px greenyellow;
+}
+
 .header-container > ul {
     list-style: none;
 }
@@ -73,7 +88,8 @@ header {
 #background-center > h1 {
     font-size: 72px;
     color: #fff;
-    text-shadow: 2px 2px grey;
+    text-shadow: 4px 4px darkcyan, darkblue 0px 0px 1px, darkblue 0px 0px 1px,   darkblue 0px 0px 1px,
+             darkblue 0px 0px 1px,   darkblue 0px 0px 1px, darkblue 0px 0px 1px;
 }
 
 #section-2, #section-3 {

@@ -1,7 +1,7 @@
 <?php
 require "../Init/config.php";
 
-if ($rej_result = mysqli_query($conn, 'SELECT * FROM Application WHERE Status = "2"')) {
+if ($rej_result = mysqli_query($conn, 'SELECT * FROM Application WHERE Status = "-1"')) {
     $rej_result_cnt = mysqli_num_rows($rej_result);
 }
 $return = ['rejResultCnt' => $rej_result_cnt];
