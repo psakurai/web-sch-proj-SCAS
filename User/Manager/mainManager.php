@@ -8,21 +8,13 @@
 <body>
   <header>
     <div class="header-container">
-      <div class="header-container-left">
-        <div id="nav_home"> HOME </div>
-      </div>
-      <div class="header-container-right">
-        <div id="nav_apply"> APPROVAL </div>
-        <div id="nav_view"> VIEW RECORD </div>
-        <div class="subnav">
-            <button class="subnavbtn"><div id="wrap-icon"></div><i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-            <a href="">MyProfile</a><br>
-            <a href="">Settings</a><br>
-            <a href="">Signout</a><br>
-          </div>
+        <div class="header-container-left">
+            <div> HOME </div>
         </div>
-      </div>
+        <div class="header-container-right">
+            <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>
+            <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
+        </div>
     </div>
   </header>
 
@@ -48,7 +40,7 @@
               <tr>
                 <td>
                     Last update:
-                      <script> 
+                      <script>
                         document.write(new Date().toLocaleDateString());
                       </script>
                 </td>
@@ -69,7 +61,7 @@
               <tr>
                 <td>
                   Last update:
-                    <script> 
+                    <script>
                       document.write(new Date().toLocaleDateString());
                     </script>
                 </td>
@@ -89,7 +81,7 @@
               <tr>
                 <td>
                   Last update:
-                    <script> 
+                    <script>
                       document.write(new Date().toLocaleDateString());
                     </script>
                 </td>
@@ -98,7 +90,7 @@
           </form>
         </div>
       </div>
-      
+
             <div id="section-3">
               <h3>VEW PENDING REQUEST</h3>
                 <?php
@@ -114,10 +106,10 @@
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr><td>", $row["Result_ID"],
                             "</td><td>", $row["Username"],
-                            "</td><td>", $row["First_Name"], 
+                            "</td><td>", $row["First_Name"],
                             "</td><td>", $row["Last_Name"],
                             "</td><td>", $row["College_Name"],
-                            "</td><td>", $row["Building_No"], 
+                            "</td><td>", $row["Building_No"],
                             "</td><td>Pending</td><td><button type='button'>View</button></td></tr>";
                         }
                     }
@@ -163,7 +155,7 @@
                     <a></a>
                   </div>
                 </div>
-                
+
             </div>
         </div>
     </footer>
