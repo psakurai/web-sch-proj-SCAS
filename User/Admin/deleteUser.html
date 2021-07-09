@@ -1,44 +1,61 @@
 <!DOCTYPE html>
+
 <head>
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../../Assets/css/style.css" type="text/css" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../../Assets/css/style.css" type="text/css" />
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-container-left">
-                <div><a href="mainAdmin.html"> HOME </a></div>
-            </div>
-            <div class="header-container-right">
-                <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>
-                <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
-            </div>
-        </div>
+  <header>
+    <div class="header-container">
+      <div class="header-container-left">
+        <div><a href="mainAdmin.html"> HOME </a></div>
+      </div>
+      <div class="header-container-right">
+        <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>
+        <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
+      </div>
+    </div>
 
-    </header>
-    <section>
-        <div class="body-container">
-            <div id="background">
-                <div id="background-center">
-                    <h1>Welcome to University!</h1>
-                </div>
-            </div>
-            <div id="section-2">
-                <h3>Admin Dashboard</h3>
-                <div id="delete-user">
-                    <h2>Delete User</h2>
-                    <form method="post" id="delete-user-form" onsubmit="return deleteUser()">
-                        <div class="input-data">
-                            <label for="id">Identification ID</label>
-                            <input type="number" name="identificationid" required /><br>
-                        </div>
-                        <input type="submit" name="submit" value="Delete User" />
-                    </form>
-                </div>
-            </div>
+  </header>
+  <section>
+    <div class="body-container">
+      <div id="background">
+        <div id="background-center">
+          <h1>Welcome to University!</h1>
         </div>
+      </div>
+      <div id="section-2">
+        <table style="width:150%">
+          <tr>
+            <th colspan="2">Admin Dashboard</th>
+          </tr>
+          <form method="post" id="delete-user-form" onsubmit="return deleteUser()">
+            <div class="input-data">
+              <tr>
+                <td>
+                  <label for="id">Identification ID</label>
+                </td>
+                <td>
+                  <input type="number" name="identificationid" required /><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" name="submit" value="Delete User" />
+                </td>
+              </tr>
+            </div>
+          </form>
+        </table>
 
-    </section>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
 </body>
 <script type="text/javascript" src="../../Function/Admin/manageUser.js"></script>
+
 </html>
