@@ -9,7 +9,7 @@
   <header>
     <div class="header-container">
         <div class="header-container-left">
-            <div><a href="mainManager.php"></a> HOME </div>
+            <div><a href="mainManager.php"> HOME </a></div>
         </div>
         <div class="header-container-right">
             <div><a href="../../Function/Global/viewProfile.php">MYPROFILE</a></div>
@@ -110,12 +110,18 @@
                             "</td><td>", $row["Last_Name"],
                             "</td><td>", $row["College_Name"],
                             "</td><td>", $row["Building_No"],
-                            "</td><td>Pending</td><td><button type='button'>View</button></td></tr>";
+                            "</td><td>Pending</td><td>
+                            <select name='Status' id='Status'>
+                            <option value='Reject'>Accept</option>
+                            <option value='Reject'>Reject</option>
+                            </select>
+                            <input type='Submit' value='Submit'>
+                            </form></td></tr>";
                         }
                     }
 
                     else {
-                        echo "<tr><td>No student applied for colleges!</td></tr>";
+                        echo "<tr><td colspan='8'>No student applied for colleges!</td></tr>";
                     }
 
                     echo "</table>";
