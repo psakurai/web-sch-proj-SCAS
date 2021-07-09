@@ -5,44 +5,23 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 ?>
 
 <header>
-    <div class="header-container">
-        <div class="header-container-left">
-            <div id="nav_home"> HOME </div>
-        </div>
-        <div class="header-container-right">
-            <div id="nav_apply"> APPLY ROOM </div>
-            <div id="nav_view"> VIEW ROOM </div>
-            <div id="wrap-icon">
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-        </div>
-    </div>
-    <div class="wrap-icon-menu">
-        <ul id="menu-opt">
-            <li>
-                <a>MY PROFILE</a>
-            </li>
-            <li>
-                <a> SETTING </a>
-            </li>
-            <li>
-                <a> SIGN OUT </a>
-            </li>
-        </ul>
-    </div>
+      <div class="header-container">
+          <div class="header-container-left">
+          </div>
+          <div class="header-container-right">
+            <div><a href = ../Global/viewProfile.php>BACK</a></div>
+            <div><a href="../../Function/Global/logout.php">SIGN OUT</a></div>
+          </div>
+      </div>
 </header>
-
+<br><br><br><br><br>
 <div class = "nav-bar-container">
-<nav class = "navigation-bar-edit-profile">
-  <ul>
-    <li><a href = ../Global/viewProfile.php>Back</a></li>
-    <li><a href = ../Global/editProfile.php >Personal Information</a></li>
-    <li><a href = ../Student/editAcademicInfo.php class="active">Academic Information</a></li>
-    <li><a href = ../Global/editPassword.php>Change Password</a></li>
-  </ul>
-</nav>
+<nav class = "navigation-bar-edit-profile"><hr>
+  <div style="text-align:right;padding-right:35px;">
+    <a href = ../Global/editProfile.php style="text-align:right;padding-right:5px;">Personal Information</a><br>
+    <a href = ../Global/editPassword.php style="text-align:right;padding-right:24px;">Change Password</a><br>
+  </div>
+</nav><hr>
 </div>
 
 <form action ="../Global/updateInformation.php" method="post">
@@ -58,21 +37,32 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
         {
           ?>
           <div class = "form-box-container">
-          <div class = "form-box">
-            <label>Study Level</label> <input type="text" name="newStudyLevel" class="form-box" value ="<?php echo $row['Study_Level']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Year </label><input type="text" name="newYear" class="form-box" value ="<?php echo $row['Year']; ?>">
-          </div>
-          <div class = "form-box">
-            <label>Semester </label><input type="text" name="newSemester" class="form-box" value ="<?php echo $row['Semester']; ?>">
-          </div>
-
-          <br>
-          <div class = "form-box">
-            <input type ="submit" name="update_Academic" class ="submit-button" value="Update">
-          </div>
-          <br>
+            <table>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Study Level</label></td>
+                  <td><input type="text" name="newStudyLevel" class="form-box" value ="<?php echo $row['Study_Level']; ?>"></td>
+                </tr>
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Year </label></td>
+                  <td><input type="text" name="newYear" class="form-box" value ="<?php echo $row['Year']; ?>"></td>
+                </tr>
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td><label>Semester </label></td>
+                  <td><input type="text" name="newSemester" class="form-box" value ="<?php echo $row['Semester']; ?>"></td>
+                </tr>
+              </div>
+              <div class = "form-box">
+                <tr>
+                  <td></td>
+                  <td><input type ="submit" name="update_Academic" class ="submit-button" value="Update"></td>
+                </tr>
+              </div>
+            </table>
 
             <?php
         }

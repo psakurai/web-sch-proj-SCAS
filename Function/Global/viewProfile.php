@@ -52,6 +52,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 
           <div class = "profile-table-container"><h2><?php echo $row['First_Name'] ; ?> 's Profile</h2>
           <table class = "profile-table">
+          <div class = "profile-section"><h3><u>Personal Information</u></h3></div>
           <tr>
               <td><th>Username</th><td>
               <td>:</td>
@@ -101,9 +102,9 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
           if(mysqli_num_rows($result2)>0)
             while($row2 = mysqli_fetch_array($result2)) {
           ?>
-          <div class = "profile-section"><h2><u>Academic Information</u></h2></div>
 
           <table class = "profile-table">
+          <div class = "profile-section"><h3><u>Academic Information</u></h3></div>
           <tr>
             <td><th>Study Level</th><td>
             <td>:</td>

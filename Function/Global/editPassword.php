@@ -18,7 +18,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <div class = "nav-bar-container">
 <nav class = "navigation-bar-edit-profile"><hr>
   <div style="text-align:right;padding-right:35px;">
-    <a href = editProfile.php>Personal Information</a>
+    <a href = editProfile.php style="text-align:right;padding-right:5px;">Personal Information</a><br>
     <?php
       if($_SESSION["LEVEL"] === "Student")
       {
