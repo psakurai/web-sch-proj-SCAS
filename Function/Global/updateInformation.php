@@ -18,7 +18,7 @@ if(isset($_POST['update'])) { // This if statement if user click update button o
       exit();
     }
 
-  $sql ="UPDATE user SET First_Name = '$userFirstName', Last_Name = '$userLastName', Phone_No = '$userPhone', Email = '$userEmail', Address = '$userAddress' WHERE Username = '$currentUser'";
+  $sql ="UPDATE User SET First_Name = '$userFirstName', Last_Name = '$userLastName', Phone_No = '$userPhone', Email = '$userEmail', Address = '$userAddress' WHERE Username = '$currentUser'";
 
   mysqli_query($conn,$sql);
   header("Location: editProfile.php?error=none");
@@ -26,7 +26,7 @@ if(isset($_POST['update'])) { // This if statement if user click update button o
 }
 
 if(isset($_POST['update_Academic'])) {  // This if statement if user click update button on Academic Info Page
-  $currentUser = $_SESSION["ID"];
+  $currentUser = $_SESSION["USER"];
   $userStudyLevel = $_POST['newStudyLevel'];
   $userYear = $_POST['newYear'];
   $userSemester = $_POST['newSemester'];
@@ -37,14 +37,14 @@ if(isset($_POST['update_Academic'])) {  // This if statement if user click updat
       exit();
     }
 
-  $sql ="UPDATE academic_information SET Study_Level = '$userStudyLevel', Year = '$userYear', Semester = '$userSemester' WHERE IdentificationID = '$currentUser'";
+  $sql ="UPDATE Academic_Information SET Study_Level = '$userStudyLevel', Year = '$userYear', Semester = '$userSemester' WHERE Username = '$currentUser'";
   mysqli_query($conn,$sql);
   header("Location: ../Student/editAcademicInfo.php?error=none");
   exit;
 }
 
 if(isset($_POST['update_Password'])) { // This if statement if user click update button on Change Password Page
-  $currentUser = $_SESSION["ID"];
+  $currentUser = $_SESSION["USER"];
   $userCurrentPassword = $_SESSION["PASSWORD"];
 
   $userPassword = $_POST['currentPassword'];
@@ -74,7 +74,7 @@ if(isset($_POST['update_Password'])) { // This if statement if user click update
       exit();
     }
 
-  $sql ="UPDATE user SET password = '$userNewPassword' WHERE IdentificationID = '$currentUser'";
+  $sql ="UPDATE User SET Password = '$userNewPassword' WHERE Username = '$currentUser'";
   mysqli_query($conn,$sql);
   $_SESSION["PASSWORD"] = $userNewPassword;
   header("location: editPassword.php?error=none");
