@@ -22,7 +22,7 @@ echo "<link rel='stylesheet' type='text/css' href='../../Assets/css/style.css' /
 <?php
   $currentUser = $_SESSION["USER"];
   $currentUserID = $_SESSION["ID"];
-  $sql = "SELECT * FROM user WHERE Username = '$currentUser'";
+  $sql = "SELECT * FROM User WHERE Username = '$currentUser'";
   $result = mysqli_query($conn,$sql);
 
   if($result)
