@@ -197,6 +197,7 @@ header {
 #rejected-request, #accepted-request, #request {
     background: #2ebee2;
     border: none;
+    color: black;
     font-size: 108px;
     font-weight: bold;
     margin: auto;
