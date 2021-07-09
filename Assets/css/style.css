@@ -203,6 +203,7 @@ header {
     margin: auto;
     width: 200px;
     text-align: center;
+    color: black;
 }
 
 input::-webkit-outer-spin-button,

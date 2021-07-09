@@ -34,7 +34,7 @@
                                 <th>Total Request</th>
                             </tr>
                             <tr>
-                                <td><input id="request" name="request" type="number" disabled></td>
+                                <td><input id="request" name="total-request" type="number" disabled></td>
                             </tr>
                             <tr>
                                 <td>
@@ -97,6 +97,9 @@
 
                 $sql = "SELECT Application.*, User.First_Name, User.Last_Name FROM Application INNER JOIN User ON Application.Username = User.Username WHERE Application.Status = 0";
                 $result = mysqli_query($conn, $sql);
+
+                echo "<table id='req-table' border=1>";
+                echo "<tr><th>Result ID</th><th>Student Username</th><th>First Name</th><th>Last Name </th><th>College Name</th><th>Building No</th><th>Status</th><th>View</th></tr>";
 
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
