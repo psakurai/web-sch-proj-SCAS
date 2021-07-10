@@ -4,15 +4,25 @@
     <meta charset="utf-8">
     <title>SCAS</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
-    <link rel="stylesheet" href="../Assets/css/style-login.css">
+    <link rel="stylesheet" href="../Assets/css/style-login.css?v=<?php echo time(); ?>">
     <script>
-    function validateLogin() {
-      let x = document.forms["input-form"]["Username"].value;
-      let y = document.forms["input-form"]["Password"].value;
-      if (x == "" || y =="") {
-        alert("Login failed. Incorrect username or password.");
+     function validateLogin() {
+      var x = document.input_form.Username.value;
+      var y = document.input_form.Password.value;
+       
+      if (x == "") {
+        document.getElementById("Username").focus();
+        alert("Login failed. Please enter username in the field.");
         return false;
       }
+
+      if(y =="") {
+        document.getElementById("Password").focus();
+        alert("Login failed. Please enter password in the field.");
+        return false;
+      }
+
+      return true;
     }
 </script>
   </head>
@@ -22,7 +32,7 @@
     </div>
     <div class="right-section">
       <div class="login-container">
-        <form class="input-form" action="../Function/Global/login.php" onsubmit="return validateLogin()"method="post">
+        <form name="input_form" action="../Function/Global/login.php" onsubmit="return validateLogin()"method="post">
           <img src="../Assets/png/UTM-logo.png" alt="UTM-emblem" style="width:300px;height:105px"><br>
           <h4>STUDENTS COLLEGE ACCOMODATION SYSTEM</h4>
           <div class="input-data">
