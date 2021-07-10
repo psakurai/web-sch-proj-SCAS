@@ -99,9 +99,9 @@ header {
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: repeat(5, 1fr);
     z-index: 1;
-    background: #4A919E;
+    background: #e5e5e5;
     width: 100%;
-
+    opacity: 0.98;
 }
 
 #section-2 {
@@ -121,7 +121,6 @@ header {
     margin: 0px 10px 0px 10px;
     height: 300px;
 }
-
 #s2-opt1 {
     background-image: url("../jpg/life_1.jpg");
     background-size: 600px 300px;
@@ -174,6 +173,7 @@ header {
     margin: 50px 0px 0px 0px;
     padding: 30px 20px 10px 50px;
     background: #4A919E;
+    opacity: 0.9;
 }
 .view-section #room-preview-1, #room-preview-2 , #room-preview-3  {
     background: rgb(179, 176, 176);
@@ -191,7 +191,7 @@ header {
 
 #myTable {
     text-align: center;
-    background: #2ebee2;
+    background: #436775;
     width: 80%;
     padding: 10px 0px 30px 0;
     border: 1px solid #eee;
@@ -205,7 +205,7 @@ header {
 }
 
 #rejected-request, #accepted-request, #request {
-    background: #2ebee2;
+    background: #436775;
     border: none;
     color: black;
     font-size: 108px;
@@ -227,15 +227,15 @@ input::-webkit-inner-spin-button {
     grid-row: 2 / 5;
     margin: 20px 50px 80px 50px;
     border: 1px solid #fff;
-    background: #ece254;
+    background: lightblue;
     border-collapse: collapse;
     text-align: center;
-    box-shadow: 50px 4px 140px 8px #eb5f1f inset;
+    box-shadow: 50px 4px 140px 8px #7f7f7f inset;
     height: 100%;
 }
 
 #req-table tr th {
-    background: #e2762e;
+    background: #323232;
     text-align: center;
     color: #fff;
 }
@@ -247,8 +247,8 @@ input::-webkit-inner-spin-button {
 
 /* footer section */
 footer {
-    border: 5px solid #bed3c3;
-    background: #bed3c3;
+    border: 5px solid #436775;
+    background: #436775;
     z-index: 1;
     padding: 0px 50px 0px 50px;
     display: grid;
@@ -299,11 +299,12 @@ margin-bottom: 30px;
 {
   padding-left: 130px;
   min-height: 550px;
-  background-color: yellow;
+  background-color: #fff;
   padding-top: 50px;
   margin: 0px 200px;
   border-radius: 15px;
   border: 1px solid black;
+  opacity: 0.9;
 }
 
 .edit-profile-button
@@ -380,10 +381,11 @@ margin-bottom: 30px;
   justify-content: center;
   height:560px;
   min-height: 400px;
-  background-color: yellow;
+  background-color: #fff;
   margin: 39px 200px;
   border-radius: 15px;
-  border: 1px solid gold;
+  border: 1px solid black;
+  opacity: 0.9;
 }
 
 .form-box-container-small
@@ -395,10 +397,11 @@ margin-bottom: 30px;
   justify-content: center;
   height:100px;
   min-height: 100px;
-  background-color: yellow;
+  background-color: #fff;
   margin: 39px 200px;
   border-radius: 15px;
-  border: 1px solid gold;
+  border: 1px solid black;
+  opacity: 0.9;
 }
 
 .form-box > tr > td {
@@ -411,7 +414,7 @@ margin-bottom: 30px;
 }
 
 .form-box-container #button-update {
-  background-color: #4CAF50;
+  background-color: #03002e;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -424,7 +427,7 @@ margin-bottom: 30px;
 }
 
 .form-box-container-small #button-update {
-  background-color: #4CAF50;
+  background-color: #03002e;
   border: none;
   color: white;
   padding: 15px 32px;

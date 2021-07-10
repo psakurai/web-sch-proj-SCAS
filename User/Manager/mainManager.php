@@ -110,8 +110,8 @@
                             "</td><td>", $row["College_Name"],
                             "</td><td>", $row["Building_No"],
                             "</td><td>Pending</td>
-                            <td><form action='../../Function/Manager/approve.php' method='POST'><input type='hidden' name='accept' value='".$row["Username"]."'/><input type='submit' name='submit' value='Approve'/></form></td>
-                            <td><form action='../../Function/Manager/reject.php' method='POST'><input type='hidden' name='reject' value='".$row["Username"]."'/><input type='submit' name='submit' value='Reject'/></form></tr>";
+                            <td><form action='../../Function/Manager/approve.php' method='POST'><input type='hidden' name='accept' value='".$row["Username"]."'/><input type='submit' name='submit' value='Approve' id='button-approve' /></form></td>
+                            <td><form action='../../Function/Manager/reject.php' method='POST'><input type='hidden' name='reject' value='".$row["Username"]."'/><input type='submit' name='submit' value='Reject' id='button-reject'/></form></tr>";
                         }
                     }
 
