@@ -105,10 +105,10 @@ header {
 }
 
 #section-2 {
-    margin-top: 550px;
+    margin-top: 350px;
     text-align: center;
     background-position: center;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 #section-2 > h3 {
@@ -120,23 +120,6 @@ header {
     grid-row: 2 / 5;
     margin: 0px 10px 0px 10px;
     height: 300px;
-}
-#s2-opt1 {
-    background-image: url("../jpg/life_1.jpg");
-    background-size: 600px 300px;
-    background-repeat: no-repeat;
-}
-
-#s2-opt2 {
-    background-image: url("../jpg/life_3.jpg");
-    background-size: 600px 300px;
-    background-repeat: no-repeat;
-}
-
-#s2-opt3 {
-    background-image: url("../jpg/room_1.jpg");
-    background-size: 600px 300px;
-    background-repeat: no-repeat;
 }
 
 #section-3 {
@@ -245,6 +228,7 @@ input::-webkit-inner-spin-button {
     padding: 10px 35px;
     margin-top:10px;
     margin-bottom: -6px;
+    cursor: pointer;
 }
 
 #result-container > table
@@ -418,6 +402,24 @@ margin-bottom: 30px;
 .form-box-container > table > tr > td {
   height: 40px;
   padding-bottom: 5px;
+}
+
+.form-box-container #apply-college-form #college-name {
+  background-color: #03002e;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.form-box-container #apply-college-form #building-no {
+  background-color: #03002e;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: justify;
+  cursor: pointer;
 }
 
 .form-box-container #button-update {
