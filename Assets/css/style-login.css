@@ -29,20 +29,20 @@ html, body {
   text-align: center;
   height: 120px;
 }
-.input-form img{
+form img{
   position: relative;
   top: -120px;
 }
-.input-form h4 {
+form h4 {
   margin: -80px 0px 30px 0px;
   font-size: 15px;
 }
-.input-form .input-data input{
+form .input-data input{
   width: 230px;
   margin: 4px 0px;
   padding: 7px 3px;
 }
-.login-container #login-btn {
+#login-btn {
   background-color: #436775;
   color: white;
   margin: 30px 0px;
