@@ -239,6 +239,13 @@ input::-webkit-inner-spin-button {
     text-align: center;
     color: #fff;
 }
+#req-table tr td input {
+    text-align: center;
+    color: #fff;
+    padding: 10px 35px;
+    margin-top:10px;
+    margin-bottom: -6px;
+}
 
 #result-container > table
 {
